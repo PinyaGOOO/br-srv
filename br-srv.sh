@@ -10,6 +10,8 @@ echo "branch_admin:P@ssw0rd" | chpasswd
 useradd -c "Network Admin" network_admin -U
 echo "network_admin:P@ssw0rd" | chpasswd
 
+hostnamectl set-hostname br-srv; exec bash
+
 
 
 
