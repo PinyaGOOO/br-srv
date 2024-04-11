@@ -1,4 +1,5 @@
 #!/bin/bash
+dnf remove -y git
 nmcli con modify ens18 ipv4.method manual ipv4.addresses 192.168.100.10/28
 nmcli con modify ens18 ipv4.gateway 192.168.100.1
 
