@@ -6,12 +6,12 @@ nmcli con modify ens18 ipv4.gateway 192.168.100.1
 nmcli con modify ens18 ipv6.method manual ipv6.addresses FD24:192::10/124
 nmcli con modify ens18 ipv6.gateway FD24:192::1
 
-useradd -c "Branch admin" branch_admin -U
-echo "branch_admin:P@ssw0rd" | chpasswd
-useradd -c "Network Admin" network_admin -U
-echo "network_admin:P@ssw0rd" | chpasswd
+useradd -c "Branch admin" Branch_admin -U
+echo "Branch_admin:P@ssw0rd" | chpasswd
+useradd -c "Network Admin" Network_admin -U
+echo "Network_admin:P@ssw0rd" | chpasswd
 
-hostnamectl set-hostname br-srv; exec bash
+hostnamectl set-hostname BR-SRV; exec bash
 
 
 
