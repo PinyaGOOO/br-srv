@@ -1,10 +1,9 @@
 #!/bin/bash
 dnf remove -y git
 dnf install -y chrony
-nmcli con modify ens18 ipv4.method manual ipv4.addresses 192.168.100.10/28
+nmcli con modify ens18 ipv4.method manual ipv4.addresses 192.168.100.10/29
 nmcli con modify ens18 ipv4.gateway 192.168.100.1
 
-timedatectl set-timezone Europe/Moscow
 sed -i '3s/^/#/' /etc/chrony.conf
 sed -i '4s/^/#/' /etc/chrony.conf
 sed -i '5s/^/#/' /etc/chrony.conf
